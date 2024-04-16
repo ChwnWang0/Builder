@@ -415,6 +415,35 @@ jobs:
           name: "${{ env.ANYKERNEL3_FILE }}"
           path: AnyKernel3/*
 
+
+
+
+# 自定义代码
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Package out directory
+        run: zip -r release.zip out/*
+
+      - name: Upload release artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: release
+          path: release.zip
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ github.run_number }}
+          files: release.zip
+
+# 自定义代码
+
+
+
+
+
+
       - name: 🧧 Create GitHub Release => (${{ env.BUILD_DATE }})
         env:
           ANYKERNEL3_FILE: "${{ env.WORKSPACE }}/AnyKernel3-${{ env.KERNEL_NAME }}-${{ env.BUILD_DATE }}"
