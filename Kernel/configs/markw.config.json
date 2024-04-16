@@ -5,7 +5,7 @@
       "repo": "https://github.com/ChwnWang0/anzhuoneihe",
       "branch": "main",
       "device": "markw",
-      "defconfig": "markw_defconfig"
+      "defconfig": "gki_defconfi"
     },
     "toolchains": [
       {
