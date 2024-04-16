@@ -1,9 +1,9 @@
 [
   {
     "kernelSource": {
-      "name": "Xiaomi4",
-      "repo": "https://github.com/SonicBSV/android_kernel_xiaomi_markw-4.9",
-      "branch": "master",
+      "name": "ceshi",
+      "repo": "https://github.com/ChwnWang0/anzhuoneihe",
+      "branch": "main",
       "device": "markw",
       "defconfig": "markw_defconfig"
     },
